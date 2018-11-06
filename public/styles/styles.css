@@ -1,0 +1,286 @@
+body {
+  background-image: url(../images/honeycomb_background.jpg);
+  background-size: contain;
+  background-repeat: repeat;
+  font-family: 'Quicksand', sans-serif;
+}
+h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  padding-top: 10px;
+}
+h3 {
+  font-family: 'Nunito', sans-serif;
+}
+p {
+  color: white;
+  margin: 20px;
+}
+
+/* Navbar */
+.nav-bar {
+  width: 100%;
+  background-color: rgba(205,243,240,.9);
+  padding-top: 1vw;
+  padding-bottom: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav-row {
+  width: 100%;
+  margin: 0 10vw;
+}
+.logo-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+#logo {
+  height: 4vw;
+  margin-bottom: 1vw;
+}
+.searchBox { 
+  display: flex;
+  flex-wrap: nowrap;
+}
+#search_idiom_input {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#search_idiom_submit {
+  background-color: #257884;
+  display: flex;
+  color: #fff;
+  margin-left: 1vw;
+}
+.home_page_button-container {
+  padding: 1vw 0;
+}
+#home_page_button{
+  border-radius: 5px;
+  color: #257884;
+  height: 100%;
+}
+
+/* Autocomplete style */
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 1;
+  width: 78vw;
+  margin-top: 40px;
+}    
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: 1px solid #d4d4d4;
+  width: 100%;
+  display: inline-flex;
+  border-radius: 5px;
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  background-color: DodgerBlue; 
+  color: #ffffff; 
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.hideDiv {
+  display: none;
+}
+
+/* Home page (language and category search) */
+#home_page_div {
+  width: 100%;
+}
+.home-container {
+  position: relative;
+  background-color: rgba(205,243,240,.8);
+  padding-bottom: 2vw;
+  border-radius: 5px;
+  font-family: 'Nunito', sans-serif;
+  color: rgb(75, 77, 77);
+  margin: 2vw 0;
+}
+.home-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1vw;
+}
+#search_language_input, #search_category_input {
+  display: inline-block;
+  width: 100%;
+  padding: .375rem 1.75rem .375rem .75rem;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+#search_language_submit, #search_category_submit {
+  background-color: rgb(53, 172, 189);
+  display: flex;
+  color: #fff;
+  margin-left: 1vw;
+  min-width: 150px;
+  justify-content: center;
+}
+.home-btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.language_button, .category_button {
+  min-width: 15vw;
+  background-color: rgb(53, 172, 189);
+  border-radius: 12px;
+  color: #fff;
+}
+
+/* Idiom card (single) */
+#the_idiom_div {
+  width: 100%;
+}
+.idiom-card {
+  display: flex;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #343a40;
+  border-radius: .25rem;
+  flex-direction: column;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+}
+.idiom-card-header {
+  background-color: rgba(53, 172, 189,.9);
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  display: flex;
+  justify-content: center;
+}
+#idiom_card_name {
+  font-weight: bold;
+  width: 100%;
+  margin: auto 0 auto 8vw;
+}
+#adding_button {
+  border: 0;
+  background: none;
+  color: white;
+  font-size: 3vw;
+}
+#copy_button{
+  border: 0;
+  background: none;
+  color: white;
+  font-size: 3vw;
+}
+.idiom-card-body, .idiom-card-footer {
+  background-color: rgba(41,199,214,.9);
+  font-family: 'Nunito', sans-serif;
+  padding: 1.25rem;
+}
+.idiom-card-title {
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.idiom-card-footer {
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+
+/* Idiom cards (multiple) */
+#multi_res_div, #multi_idiom_holder {
+  width: 100%;
+}
+#multi_idiom_holder {
+  margin: 1vw 0 2vw 0;
+}
+.multi_idiom_card {
+  margin-top: 1vw;
+  max-width: 60rem; 
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #343a40;
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add idiom */
+#add_page_div {
+  width: 100%;
+}
+.addIdiom {
+  width: 100%;
+  background-color: rgb(53, 172, 189);
+  color: #fff;
+  text-align: center;
+  border: 1px solid #343a40;
+  border-radius: .25rem;
+  margin: 1vw 0 2vw 0;
+}
+.addIdiom-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+#submit_idiom {
+  margin-bottom: 2vw;
+  background-color: #257884;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  background-color: #257884;
+  color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  font-size: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+@media (max-width: 979px){
+}
+
+@media (max-width: 768px){
+}
+
+@media (max-width: 567px){
+}

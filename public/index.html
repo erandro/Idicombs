@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LingoBits</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Playfair+Display:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="nav-container">
+        <div class="nav-bar">
+
+            <div class="nav-row logo-row">
+                <img id="logo" src="./images/logo.png" alt="logo">
+                <div class="home_page_button-container">
+                    <button id="home_page_button" class="fas fa-home fa-lg"></button>
+                </div>
+            </div>
+
+            <div class="nav-row searchBox">
+                <label class="sr-only" for="inlineFormInput"></label>
+                <input id="search_idiom_input" type="search" placeholder="idioms">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- The Website -->
+    <div class="container">
+
+        <div id="home_page_div">
+            <!-- Home Page - language -->
+            <div class="home-container">
+                <div class="home-row">
+                    <h2>Search by Language</h2>
+                </div>
+                <div class="home-row">
+                    <select id="search_language_input"></select>
+                    <button id="search_language_submit" class="btn" type="button">Search Language</button>
+                </div>
+                <div class="home-row">
+                    <h4>Most Popular Languages</h4>
+                </div>
+                <div class="home-row">
+                    <div class="home-btn-container">
+                        <button id="langBtn1" class="btn language_button" data-id="5" type="button">
+                            עִברִית
+                        </button>
+                        <button id="langBtn2" class="btn language_button" data-id="4" type="button">
+                            Tagalog
+                        </button>
+                        <button id="langBtn1" class="btn language_button" data-id="13" type="button">
+                            عربى
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Page - topics -->
+            <div class="home-container">
+                <div class="home-row">
+                    <h2>Search by Topic</h2>
+                </div>
+                <div class="home-row">
+                    <select id="search_category_input"></select>
+                    <button id="search_category_submit" class="btn" type="button">Search Topic</button>
+                </div>
+                <div class="home-row">
+                    <h4>Most Popular Topic</h4>
+                </div>
+                <div class="home-row">
+                    <div class="home-btn-container">
+                        <button id="categoryBtn1" class="btn category_button" data-name="Shame" type="button">
+                            Shame
+                        </button>
+                        <button id="categoryBtn2" class="btn category_button" data-name="Age" type="button">
+                            Age
+                        </button>
+                        <button id="categoryBtn3" class="btn category_button" data-name="Opinion" type="button">
+                            Opinion
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Idiom Card -->
+        <div class="hideDiv" id="the_idiom_div">
+            <div class="idiom-card">
+                <div class="idiom-card-header">
+                    <h3 id="idiom_card_name"></h3>
+                    <button id="adding_button" data-id="" data-category="">
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                    <button id="copy_button" data-name="">
+                        <i class="far fa-copy" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="idiom-card-body">
+                    <p class="idiom-card-title">Pronunciation:</p>
+                    <p id="idiom_card_pronunciation" class="idiom-card-text"></p>
+                    <p class="idiom-card-title">Literal Translation:</p>
+                    <p id="idiom_card_literalTrans" class="idiom-card-text"></p>
+                    <p class="idiom-card-title">Meaning:</p>
+                    <p id="idiom_card_meaning" class="idiom-card-text"></p>
+                    <p class="idiom-card-title">Category:</p>
+                    <p id="idiom_card_category" class="idiom-card-textt"></p>
+                    <img id="idiom_card_language" src="" alt="language marked by flag">
+                </div>
+                <div id="link_holder" class="idiom-card-footer"></div>
+            </div>
+        </div>
+
+        <!-- Multiple Results Mini Cards -->
+        <div id="multi_res_div">
+            <div class="" id="multi_idiom_holder">
+            </div>
+        </div>
+
+        <!-- Add Idiom Form Card -->
+        <div id="add_page_div" class="hideDiv">
+            <div class="addIdiom">
+                <h2 id="OrigIdiom" class="idiom-card-title">
+                    Add a new idiom
+                </h2>
+                <form>
+                    <div class="addIdiom-row">
+                        <div class="col-2"></div>
+                        <div class="col-8 form-group">
+                            <label for="dropDownLang">
+                                Origin Language of the Idiom
+                            </label>
+                            <select required id="language_form" class="form-control is-valid" placeholder="Select a language">
+                            </select>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="addIdiom-row">
+                        <div class="col-2"></div>
+                        <div class="col-8 form-group">
+                            <label for=pronunciation>Idiom (in original language)</label>
+                            <textarea required id="idiom_form" type="text" class="form-control" rows="2" placeholder='Example: "Can you dig it?"'></textarea>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="addIdiom-row">
+                        <div class="col-2"></div>
+                        <div class="col-8 form-group">
+                            <label for=pronunciation>Pronunciation</label>
+                            <textarea id="pronunciation_form" type="text" class="form-control" rows="2" placeholder="ken yu dig it"></textarea>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="addIdiom-row">
+                        <div class="col-2"></div>
+                        <div class="col-8 form-group">
+                            <label for=pronunciation>Literal Translation</label>
+                            <textarea required id="literal_form" class="form-control" rows="2" placeholder='Example: Asking someone if they enjoy something'></textarea>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="addIdiom-row">
+                        <div class="col-2"></div>
+                        <div class="col-8 form-group">
+                            <label for="Meaning">Meaning</label>
+                            <textarea required id="meaning_form" class="form-control" rows="4" placeholder="Meaning/Connotation-Example: Can you dig it is slang for 'Do you understand?'"></textarea>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <button id="submit_idiom" class="btn" type="button">
+                        Submit New Idiom
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <br>
+    <br>
+    <footer class="footer">
+        <p>copyright© 2018</p>
+    </footer>
+
+    <!-- JQuery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+    <!-- javascript -->
+    <script src="js/index.js"></script>
+
+</body>
+
+</html

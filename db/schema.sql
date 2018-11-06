@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS idioms_db;
+CREATE DATABASE idioms_db;
