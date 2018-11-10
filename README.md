@@ -1,6 +1,6 @@
 # Idicombs
 
-Idicombs (a.k.a LingoBits) is a unique idiom search engine with the added feature of linking idioms to other languages. It serves to connect people through language and bridging the cultural gap by showing how different languages say the same thing in different ways.
+Idicombs (a.k.a LingoBits) an application to connect people through language and bridge cultural differences by utilizing a unique idiom search engine with the added feature of linking idioms to their equivalents in other languages.
 
 This is a passion project of mine that started as a group project with [**Sherif H. Mahmoud**](https://github.com/sherifmahmoud), [**Haddassah Mendoza-Elias**](https://github.com/haddassah) and [**Ellen Baccera**](https://github.com/ebacerra?tab=repositories). You can check out the first version of this website [here](https://github.com/erandro/LingoBits).
 
