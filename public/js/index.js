@@ -406,7 +406,24 @@ $(document).ready(function () {
     // ### get all (or one) idioms - search by name
     searchIdiomImput.keyup(function (event) {
       if (event.keyCode === 13) {
-        searchIdiomSubmit.click();
+        event.preventDefault();
+        var name = searchIdiomImput.val().trim();
+        name = name.replace(/\s+/g, '+');
+        $.ajax("/api/idiomsbyName/" + name, {
+          type: "get"
+        }).then(
+          function (data) {
+            $(searchIdiomImput).val("");
+            if (data.length === 1) {
+              hideAndShow(idiomDiv);
+              showSearchedIdiom(data);
+              getIdiomLinks(data[0].id);
+            } else {
+              hideAndShow(multiDiv);
+              showMutiSearchedIdioms(data);
+            }
+          }
+        );
       }
     });
 
