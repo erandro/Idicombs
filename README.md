@@ -8,7 +8,10 @@ This is a passion project of mine that started as a group project with [**Sherif
 
 - [Folder Structure](#folder-structure)
 - [Version](#version)
-- [How does it work](#how-does-it-work)
+- [How does it work - Search](#search)
+- [How does it work - Idiom info](#idiom-info)
+- [How does it work - Adding idioms](#adding-idioms)
+- [How does it work - Copy to clipboard](#copy-to-clipboard)
 - [Installation](#installation)
 - [Deployment](#deployment)
 
