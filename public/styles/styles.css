@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
   background-image: url(../images/honeycomb_background.jpg);
   background-size: contain;
@@ -14,7 +22,7 @@ h3 {
 }
 p {
   color: white;
-  margin: 20px;
+  margin: 10px;
 }
 
 /* Navbar */
@@ -114,6 +122,16 @@ p {
 }
 .hideDiv {
   display: none;
+}
+
+.col-world-4 {
+  width: 33%; 
+}
+.col-world-8 {
+  width: 66%; 
+}
+.world-container {
+  width: 100%;
 }
 
 /* Home page (language and category search) */
@@ -277,10 +295,19 @@ footer {
 }
 
 @media (max-width: 979px){
+  .world-container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px){
+  .world-container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 567px){
+  .world-container {
+    width: 100%;
+  }
 }
