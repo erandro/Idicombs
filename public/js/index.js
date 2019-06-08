@@ -12,11 +12,11 @@ $(document).ready(function () {
   var searchIdiomSubmit = $("#search_idiom_submit");
   var searchIdiomImput = $("#search_idiom_input");
   var homepageButton = $("#home_page_button");
-  // ## home gage card - category
+  // ## home page card - category
   var categoryButton = $(".category_button");
   var searchCategorySubmit = $("#search_category_submit");
   var searchCategoryImput = $("#search_category_input");
-  // ## home gage card - language
+  // ## home page card - language
   var languageButton = $(".language_button");
   var searchLanguageSubmit = $("#search_language_submit");
   var searchLanguageImput = $("#search_language_input");
