@@ -3,4 +3,8 @@ node_modules
 npm-debug.log
 .env
 db
+<<<<<<< HEAD
 config
+=======
+config
+>>>>>>> 244fc407c5ebc07d9f22e262478e864451147b05
