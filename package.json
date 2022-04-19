@@ -1,7 +1,7 @@
 {
-  "name": "groupproject-2",
-  "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "name": "idicombs",
+  "version": "2.1.0",
+  "description": "Idioms in all languages",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -37,12 +37,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erandro/groupproject-2.git"
+    "url": "git+https://github.com/erandro/Idicombs.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eran Dromy",
   "bugs": {
-    "url": "https://github.com/erandro/groupproject-2/issues"
+    "url": "https://github.com/erandro/Idicombs/issues"
   },
-  "homepage": "https://github.com/erandro/groupproject-2#readme"
+  "homepage": "https://github.com/erandro/Idicombs#readme"
 }
