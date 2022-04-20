@@ -252,6 +252,9 @@ p {
   display: flex;
   flex-direction: column;
 }
+.idiom-card-flagIcon{
+  width: 6vw;
+}
 
 /* Add idiom */
 #add_page_div {
